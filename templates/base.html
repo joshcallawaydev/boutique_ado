@@ -34,7 +34,7 @@
     {% endblock %}
 
     {% block extra_js %}
-    (% endblock }
+    {% endblock %}
 
     <!-- tab title-->
     <title>Boutique Ado {% block extra_title %}{% endblock %}</title>
@@ -42,13 +42,18 @@
 
 <body>
     <header class="container-fluid fixed-top"></header>
-    (% if messages %}
+    {% if messages %}
         <div class="message-container"></div>
-    (% endif %}
+    {% endif %}
 
     {% block page_header %}
+    {% endblock %}
 
-    {% end block %}
+    {% block content %}
+    {% endblock %}
+    
+    {% block postloadjs %}
+    {% endblock %}
 
 </body>
 
